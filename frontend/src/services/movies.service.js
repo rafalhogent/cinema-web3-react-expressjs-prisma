@@ -1,20 +1,24 @@
-import movies from "../assets/movies.json"
+import Axios from "axios";
+const BASEURL = 'http://localhost:3001';
 
-const getAllMovies = () => {
-    return movies.map(m => {
+const getAllMovies = async () => {
+    const res = await Axios.get(`${BASEURL}/movies`);
+    const mapped = res.data.map(m => {
         return {
-            id: movies.indexOf(m),
+            id: res.data.indexOf(m),
             ...m
         }
-    })
+    });
+    return mapped;
 }
 
-const getMovieById = (id) => {
+const getMovieById = async (id) => {
     try {
-        return movies[id]
+        const res = await Axios.get(`${BASEURL}/movies/${id}`);
+        return res.data;
     } catch (error) {
         return undefined;
     }
 }
 
-export {getAllMovies, getMovieById}
+export { getAllMovies, getMovieById }

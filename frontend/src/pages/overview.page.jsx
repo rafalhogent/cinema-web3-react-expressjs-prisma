@@ -1,26 +1,31 @@
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import CardsGrid from "../components/grid"
 import { getAllMovies } from "../services/movies.service";
 import debounce from 'debounce';
 
 const OverviewPage = () => {
   const [movies, setMovies] = useState([]);
+  const [searchTxt, setSearchTxt] = useState("");
+  const isLoaded = useRef(false);
 
   useEffect(() => {
-    let ignore = false;
-    if (!ignore) {
-      const recMovies = getAllMovies();
-      setMovies(recMovies);
+    if (!isLoaded.current) {
+      loadMovies();
+      isLoaded.current = true;
     }
-    return () => {ignore = true}
   }, []);
 
-  const [searchTxt, setSearchTxt] = useState("");
+
+  const loadMovies = () => {
+    getAllMovies().then(resp => {
+      setMovies(resp);
+    });
+  }
 
   const filteredMovies = useMemo(
     () => {
       const txt = searchTxt.toLowerCase()
-      return movies.filter(m =>
+      return movies?.filter(m =>
         m.title?.toLowerCase().includes(txt) ||
         m.extract?.toLowerCase().includes(txt)
       )
@@ -29,7 +34,7 @@ const OverviewPage = () => {
   );
 
   const handleSearchChange = (e) => {
-    debounce(() => {setSearchTxt(e.target.value)}, 500).apply();
+    debounce(() => { setSearchTxt(e.target.value) }, 500).apply();
   }
 
   return <div>

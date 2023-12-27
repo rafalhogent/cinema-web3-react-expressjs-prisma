@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieById } from "../services/movies.service";
 
 const MoviePage = () => {
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
+    const isLoaded = useRef(false);
+
+    const loadMovie = () => {
+        getMovieById(id).then(res => {
+            setMovie(res);
+        });
+    }
 
     useEffect(() => {
-        let ignore = false;
-        if (!ignore) {
-            const recMovie = getMovieById(id); //TODO async backend 
-            setMovie(recMovie);
+        if (!isLoaded.current) {
+            loadMovie();
         }
-        return () => { ignore = true }
+        isLoaded.current = true;
     }, []);
 
     return (
@@ -23,9 +28,9 @@ const MoviePage = () => {
                         <h2 className="text-base font-semibold leading-7 text-indigo-600"></h2>
                         {movie?.genres.map(a => {
                             return (
-                                <span 
-                                key={movie?.genres.indexOf(a)}
-                                className=" mr-8 text-base font-semibold leading-7 text-indigo-600"
+                                <span
+                                    key={movie?.genres.indexOf(a)}
+                                    className=" mr-8 text-base font-semibold leading-7 text-indigo-600"
                                 >{a}</span>
                             )
                         })}
