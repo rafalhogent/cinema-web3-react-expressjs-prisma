@@ -27,7 +27,8 @@ const OverviewPage = () => {
       const txt = searchTxt.toLowerCase()
       return movies?.filter(m =>
         m.title?.toLowerCase().includes(txt) ||
-        m.extract?.toLowerCase().includes(txt)
+        m.extract?.toLowerCase().includes(txt) ||
+        m.genres?.some(g => g.toLowerCase().includes(txt))
       )
     },
     [movies, searchTxt]

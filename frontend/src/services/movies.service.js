@@ -3,10 +3,10 @@ const BASEURL = 'http://localhost:3001';
 
 const getAllMovies = async () => {
     const res = await Axios.get(`${BASEURL}/movies`);
-    const mapped = res.data.map(m => {
+    const mapped = res.data.map((movie, idx )=> {
         return {
-            id: res.data.indexOf(m),
-            ...m
+            id: idx,
+            ...movie
         }
     });
     return mapped;

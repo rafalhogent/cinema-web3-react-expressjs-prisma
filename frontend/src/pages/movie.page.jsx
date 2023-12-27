@@ -26,12 +26,11 @@ const MoviePage = () => {
                 <div className="lg:pr-8 lg:pt-4">
                     <div className="lg:max-w-lg">
                         <h2 className="text-base font-semibold leading-7 text-indigo-600"></h2>
-                        {movie?.genres.map(a => {
+                        {movie?.genres.map((genre, idx) => {
                             return (
-                                <span
-                                    key={movie?.genres.indexOf(a)}
-                                    className=" mr-8 text-base font-semibold leading-7 text-indigo-600"
-                                >{a}</span>
+                                <span key={idx} className="mr-8 text-base font-semibold leading-7 text-indigo-600">
+                                    {genre}
+                                </span>
                             )
                         })}
 
