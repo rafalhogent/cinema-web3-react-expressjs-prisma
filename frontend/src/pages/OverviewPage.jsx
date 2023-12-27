@@ -1,5 +1,5 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import CardsGrid from "../components/grid"
+import CardsGrid from "../components/Grid"
 import { getAllMovies } from "../services/movies.service";
 import debounce from 'debounce';
 

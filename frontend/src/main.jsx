@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import ErrorPage from './pages/error.page.jsx';
-import OverviewPage from './pages/overview.page.jsx';
-import AboutPage from './pages/about.page.jsx';
-import MoviePage from './pages/movie.page.jsx';
+import ErrorPage from './pages/ErrorPage.jsx';
+import OverviewPage from './pages/OverviewPage.jsx';
+import AboutPage from './pages/AboutPage.jsx';
+import MoviePage from './pages/MoviePage.jsx';
 
 
 const router = createBrowserRouter([
