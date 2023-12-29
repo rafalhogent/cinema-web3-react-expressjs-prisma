@@ -1,0 +1,508 @@
+[
+  {
+    "id": 1,
+    "title": "The Greatest Beer Run Ever",
+    "description": "The Greatest Beer Run Ever is a 2022 American biographical war comedy-drama film directed and co-written by Peter Farrelly, based on the book of the same name by John \"Chickie\" Donohue and Joanna Molloy. The film stars Zac Efron and Russell Crowe, and follows the true story of Donohue, who as a young veteran sneaks into the Vietnam War to deliver some beer to his friends, who are serving their duty.",
+    "genres": [{ "id": 4 }, { "id": 5 }, { "id": 10 }, { "id": 19 }],
+    "cast": [{ "id": 1 }, { "id": 2 }, { "id": 3 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f8/Greatest_Beer_Run_Ever.jpg",
+    "duration": 174
+  },
+  {
+    "id": 2,
+    "title": "News of the World",
+    "description": "News of the World is a 2020 American Western film co-written and directed by Paul Greengrass, based on the 2016 novel of the same name by Paulette Jiles, and starring Tom Hanks and Helena Zengel. The film follows an aging Civil War veteran who must return a young girl who was taken in by the Kiowa, and raised as one of them, to her last remaining family. She has lost both her birth and Kiowa families.",
+    "genres": [{ "id": 22 }],
+    "cast": [{ "id": 4 }, { "id": 5 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/94/News_of_the_World_film_poster.png",
+    "duration": 105
+  },
+  {
+    "id": 3,
+    "title": "Penguin Bloom",
+    "description": "Penguin Bloom is a 2020 Australian drama film directed by Glendyn Ivin, from a screenplay by Shaun Grant and Harry Cripps, and is based on the book of the same name by Cameron Bloom and Bradley Trevor Greive. It stars Naomi Watts, Andrew Lincoln and Jacki Weaver. The book and film are based on a true story of Sam and Cameron Bloom's family and their interactions with an Australian magpie named 'Penguin'.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 6 }, { "id": 7 }, { "id": 8 }, { "id": 9 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/bc/Penguin_Bloom_poster.png",
+    "duration": 137
+  },
+  {
+    "id": 4,
+    "title": "The Girl Who Believes in Miracles",
+    "description": "The Girl Who Believes in Miracles is a 2021 American Christian drama film directed and produced by Richard Correll. The film stars Mira Sorvino, Peter Coyote, Austyn Johnson, and Kevin Sorbo. The Girl Who Believes in Miracles was released on April 2, 2021, produced by 120 dB Films, Gerson Productions, The Mustard Seed Production, and Trailmaker Productions. It was distributed by Atlas Distribution Company.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 10 }, { "id": 11 }, { "id": 12 }, { "id": 13 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/4b/Girl_who_believes_in_miracles.jpg",
+    "duration": 160
+  },
+  {
+    "id": 5,
+    "title": "Sneakerella",
+    "description": "Sneakerella is a 2022 American musical comedy film directed by Elizabeth Allen Rosenbaum and written by David Light & Joseph Raso, Tamara Chestna, Mindy Stern, and George Gore II. A re-imagining of the classic fairy tale Cinderella, the film stars Chosen Jacobs, Lexi Underwood, Devyn Nekoda, Bryan Terrell Clark, Kolton Stewart, Hayward Leach, Robyn Alomar, Yvonne Senat Jones, Juan Chioran, and John Salley.",
+    "genres": [{ "id": 4 }, { "id": 18 }],
+    "cast": [{ "id": 14 }, { "id": 15 }, { "id": 16 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/21/Sneakerella.jpg",
+    "duration": 95
+  },
+  {
+    "id": 6,
+    "title": "Timmy Failure: Mistakes Were Made",
+    "description": "Timmy Failure: Mistakes Were Made is a 2020 American adventure fantasy comedy-drama family film based on the book series of the same name by Stephan Pastis that debuted on Disney+ on February 7, 2020. The film is directed by Tom McCarthy, produced by Alexander Dostal, McCarthy and Jim Whitaker from a screenplay written by McCarthy and Pastis and stars Winslow Fegley, Ophelia Lovibond, Craig Robinson and Wallace Shawn.",
+    "genres": [
+      { "id": 8 },
+      { "id": 4 },
+      { "id": 5 },
+      { "id": 12 },
+      { "id": 9 }
+    ],
+    "cast": [{ "id": 17 }, { "id": 18 }, { "id": 19 }, { "id": 20 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c8/Timmy_Failure_Mistakes_Were_Made_Poster.jpeg",
+    "duration": 136
+  },
+  {
+    "id": 7,
+    "title": "Beast",
+    "description": "Beast is a 2022 survival action horror film directed by Baltasar Kormákur from a screenplay by Ryan Engle, based on a story by Jaime Primak Sullivan. The film stars Idris Elba, Iyana Halley, Leah Sava Jeffries, and Sharlto Copley. It follows a widowed father and his two teenage daughters who visit a South African game reserve but must fight to survive when they are stalked and attacked by a ferocious, rogue, man-killing lion.",
+    "genres": [{ "id": 2 }, { "id": 1 }],
+    "cast": [{ "id": 21 }, { "id": 22 }, { "id": 23 }, { "id": 24 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/8/81/Beast_2022_American_poster.jpg",
+    "duration": 158
+  },
+  {
+    "id": 8,
+    "title": "God's Creatures",
+    "description": "God's Creatures is a 2022 psychological drama film directed by Saela Davis and Anna Rose Holmer with the screenplay written by Shane Crowley, based on a story he wrote with producer Fodhla Cronin O'Reilly. It stars Emily Watson, Paul Mescal, Aisling Franciosi, Declan Conlon, Toni O'Rourke, Marion O'Dwyer, Brendan McCormack, and Lalor Roddy. The film premiered at Directors' Fortnight of the Cannes Film Festival on 19 May 2022.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 25 }, { "id": 26 }, { "id": 27 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/2b/God%27s_Creatures.jpg",
+    "duration": 81
+  },
+  {
+    "id": 9,
+    "title": "Son of the South",
+    "description": "Son of the South is a 2020 American biographical historical drama film, written and directed by Barry Alexander Brown. Based on Bob Zellner's autobiography, The Wrong Side of Murder Creek: A White Southerner in the Freedom Movement, it stars Lucas Till, Lex Scott Davis, Lucy Hale, Jake Abel, Shamier Anderson, Julia Ormond, Cedric the Entertainer and Brian Dennehy in his final film role. Spike Lee serves as an executive producer.",
+    "genres": [{ "id": 5 }, { "id": 15 }, { "id": 19 }],
+    "cast": [{ "id": 28 }, { "id": 29 }, { "id": 30 }, { "id": 31 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/ce/SonoftheSouth2020.png",
+    "duration": 128
+  },
+  {
+    "id": 10,
+    "title": "I'm Thinking of Ending Things",
+    "description": "I'm Thinking of Ending Things is a 2020 American surrealist psychological thriller film written and directed by Charlie Kaufman. It is an adaptation of the 2016 novel of the same name by Iain Reid. The plot follows a young woman who goes on a trip with her boyfriend to meet his parents ; throughout the film, the main narrative is intercut with footage of a school janitor going to work, with both stories intersecting by the third act.",
+    "genres": [{ "id": 7 }],
+    "cast": [{ "id": 32 }, { "id": 33 }, { "id": 34 }, { "id": 35 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/2f/I%27m_Thinking_Of_Ending_Things_poster.jpeg",
+    "duration": 148
+  },
+  {
+    "id": 11,
+    "title": "The Murder of Nicole Brown Simpson",
+    "description": "The Murder of Nicole Brown Simpson is a 2019 American crime horror film directed by Daniel Farrands. The film is loosely based on the murder of Nicole Brown Simpson, presenting a version of events in which Brown Simpson is murdered by serial killer Glen Edward Rogers, and not by O. J. Simpson, her ex-husband and the primary suspect in the case. Though Mena Suvari's performance as Nicole Brown was praised, the film was panned by critics.",
+    "genres": [{ "id": 6 }, { "id": 1 }],
+    "cast": [{ "id": 36 }, { "id": 37 }, { "id": 38 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/ed/The_Murder_of_Nicole_Brown_Simpson_poster.jpg",
+    "duration": 132
+  },
+  {
+    "id": 12,
+    "title": "Georgetown",
+    "description": "Georgetown is a 2019 American crime drama film directed by Christoph Waltz and written by David Auburn. It is based on Franklin Foer's 2012 New York Times Magazine article \"The Worst Marriage in Georgetown\", which details the 2011 murder of 91-year-old socialite Viola Herms Drath by her much-younger second husband in the Georgetown neighborhood of Washington, D.C. Waltz stars alongside Vanessa Redgrave, Annette Bening and Corey Hawkins.",
+    "genres": [{ "id": 6 }, { "id": 5 }],
+    "cast": [{ "id": 39 }, { "id": 40 }, { "id": 41 }, { "id": 42 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/35/Georgetown_poster.jpg",
+    "duration": 115
+  },
+  {
+    "id": 13,
+    "title": "Love Hard",
+    "description": "Love Hard is a 2021 American romantic comedy film directed by Hernán Jiménez and written by Danny Mackey and Rebecca Ewing. Starring Nina Dobrev, Jimmy O. Yang and Darren Barnet, it is about a young woman who travels to her online crush's hometown for Christmas but discovers she's been catfished. It was produced by Wonderland Sound and Vision and filmed in Vancouver from October to November 2020. It released by Netflix on November 5, 2021.",
+    "genres": [{ "id": 4 }, { "id": 13 }],
+    "cast": [{ "id": 43 }, { "id": 44 }, { "id": 45 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/f/f6/Love_Hard_poster.jpg",
+    "duration": 162
+  },
+  {
+    "id": 14,
+    "title": "Barbarian",
+    "description": "Barbarian is a 2022 American horror thriller film written and directed by Zach Cregger in his solo screen writing and directorial debut. It is produced by Arnon Milchan, Roy Lee, Raphael Margules, and J.D. Lifshitz. The film stars Georgina Campbell, Bill Skarsgård, and Justin Long. The plot sees a woman find out that the rental home she reserved has been accidentally double-booked by a man, not knowing of a dark secret within the dwelling.",
+    "genres": [{ "id": 1 }, { "id": 7 }],
+    "cast": [{ "id": 46 }, { "id": 47 }, { "id": 48 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/eb/Barbarian_2022_film_poster.png",
+    "duration": 111
+  },
+  {
+    "id": 15,
+    "title": "Goodnight Mommy",
+    "description": "Goodnight Mommy is a 2022 American psychological horror film directed by Matt Sobel and written by Kyle Warren, serving as a remake of the 2014 Austrian film of the same name. The film stars Naomi Watts, Cameron and Nicholas Crovetti, Crystal Lucas-Perry, Jeremy Bobb, and Peter Hermann. The film follows twin brothers who suspect their mother was switched with an impostor, following her recent surgery leaving her with bandages over her face.",
+    "genres": [{ "id": 1 }, { "id": 10 }],
+    "cast": [{ "id": 6 }, { "id": 49 }, { "id": 50 }, { "id": 51 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/55/GoodnightMommy2022poster.jpg",
+    "duration": 141
+  },
+  {
+    "id": 16,
+    "title": "I Still Believe",
+    "description": "I Still Believe is a 2020 American Christian romantic drama film directed by the Erwin brothers and starring KJ Apa, Britt Robertson, Shania Twain, Melissa Roxburgh, and Gary Sinise. It is based on the life of American contemporary Christian music singer-songwriter Jeremy Camp and his first wife, Melissa Lynn Henning-Camp, who was diagnosed with ovarian cancer shortly before they married. Camp's song \"I Still Believe\" is the film's namesake.",
+    "genres": [{ "id": 5 }, { "id": 13 }],
+    "cast": [{ "id": 52 }, { "id": 53 }, { "id": 54 }, { "id": 55 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/18/I_Still_Believe_promotional_poster.jpg",
+    "duration": 133
+  },
+  {
+    "id": 17,
+    "title": "65",
+    "description": "65 is a 2023 American science fiction action thriller film written and directed by Scott Beck and Bryan Woods and starring Adam Driver and Ariana Greenblatt. It is a co-production between Columbia Pictures, Bron Creative, Raimi Productions, TSG Entertainment, and Beck/Woods. In the film, a pilot crashes on an unknown planet, which turns out to be Earth during the Cretaceous period, and fights to survive the dangerous prehistoric environment.",
+    "genres": [{ "id": 2 }, { "id": 3 }, { "id": 7 }],
+    "cast": [{ "id": 56 }, { "id": 57 }, { "id": 58 }, { "id": 59 }],
+    "year": 2023,
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c4/65_film_teaser_poster.jpg",
+    "duration": 105
+  },
+  {
+    "id": 18,
+    "title": "Sundown",
+    "description": "Sundown is a 2021 drama film written and directed by Michel Franco. It stars Tim Roth, Charlotte Gainsbourg and Iazua Larios. The plot follows a wealthy man (Roth) who attempts to abandon his family on vacation after the death of his mother. The film had its world premiere at the Venice Film Festival on 5 September 2021, and was released in the United States by Bleecker Street on 28 January 2022. The film was met with generally positive reviews.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 60 }, { "id": 61 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/ca/Sundown_%282021_film%29.jpg",
+    "duration": 176
+  },
+  {
+    "id": 19,
+    "title": "Interceptor",
+    "description": "Interceptor is a 2022 action drama film directed by Matthew Reilly from a screenplay that he co-wrote with Stuart Beattie. The film stars Elsa Pataky and Luke Bracey. It is about terrorists who want to launch a nuclear attack on the United States with stolen missiles. When the terrorists attack a remote offshore missile interceptor platform that could stop their missiles, \nan officer (Pataky) defends the facility with courage and resourcefulness.",
+    "genres": [{ "id": 2 }, { "id": 5 }],
+    "cast": [{ "id": 62 }, { "id": 63 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/31/Interceptor_%28film%29.jpg",
+    "duration": 135
+  },
+  {
+    "id": 20,
+    "title": "Spoiler Alert",
+    "description": "Spoiler Alert is a 2022 American biographical romantic drama film starring Jim Parsons and Ben Aldridge as two lovers, one who watches the other's final months before his death from terminal cancer. The film, based on the 2017 memoir Spoiler Alert: The Hero Dies by Michael Ausiello, is directed by Michael Showalter and written by David Marshall Grant and Dan Savage. Parsons plays Ausiello, and Aldridge plays his lover Kit Cowan who dies of cancer.",
+    "genres": [{ "id": 5 }, { "id": 19 }, { "id": 13 }],
+    "cast": [{ "id": 64 }, { "id": 65 }, { "id": 66 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c1/Spoiler_Alert_film_poster.png",
+    "duration": 99
+  },
+  {
+    "id": 21,
+    "title": "Books of Blood",
+    "description": "Books of Blood is a 2020 American anthology horror film directed by Brannon Braga and co-written by Braga and Adam Simon. It is based on Books of Blood by Clive Barker and is the second film adaptation after Book of Blood (2009). The film premiered at the 2020 Screamfest Horror Film Festival on October 6, 2020, and was released on Hulu the following day. This was the final production by Touchstone Television before being folded into 20th Television.",
+    "genres": [{ "id": 1 }],
+    "cast": [{ "id": 53 }, { "id": 67 }, { "id": 68 }, { "id": 69 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/55/Books_of_blood_xlg.jpg",
+    "duration": 92
+  },
+  {
+    "id": 22,
+    "title": "Three Christs",
+    "description": "Three Christs, also known as State of Mind, is a 2017 American drama film directed, co-produced, and co-written by Jon Avnet and based on Milton Rokeach's nonfiction book The Three Christs of Ypsilanti. It screened in the Gala Presentations section at the 2017 Toronto International Film Festival. The film is also known as: Three Christs of Ypsilanti, The Three Christs of Ypsilanti, Three Christs of Santa Monica, and The Three Christs of Santa Monica.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 70 }, { "id": 71 }, { "id": 72 }, { "id": 73 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a1/Three_Christs_poster.jpg",
+    "duration": 171
+  },
+  {
+    "id": 23,
+    "title": "Lost Girls & Love Hotels",
+    "description": "Lost Girls & Love Hotels is a 2020 American erotic thriller drama film directed by William Olsson from a screenplay by Catherine Hanrahan, based on Hanrahan's 2006 novel Lost Girls and Love Hotels. The film stars Alexandra Daddario as an American English teacher in Tokyo, who loses herself to the city's nightlife and begins an affair with a member of the Yakuza gangs. It was released through video on demand on September 18, 2020, by Astrakan Film AB.",
+    "genres": [{ "id": 5 }, { "id": 21 }, { "id": 7 }],
+    "cast": [{ "id": 74 }, { "id": 75 }, { "id": 76 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/44/Lost_Girls_%26_Love_Hotels_film_poster.png",
+    "duration": 116
+  },
+  {
+    "id": 24,
+    "title": "The White Tiger",
+    "description": "The White Tiger is a 2021 drama film written and directed by Ramin Bahrani. The film stars Adarsh Gourav, Priyanka Chopra Jonas, and Rajkummar Rao. The film was produced by Mukul Deora and Ramin Bahrani, and executive produced by Chopra Jonas, Prem Akkaraju, and Ava DuVernay. An adaptation of Aravind Adiga's 2008 novel of the same name, the story is about Balram, who comes from a poor Indian village and uses his wit and cunning to escape from poverty.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 77 }, { "id": 78 }, { "id": 79 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/24/The_White_Tiger_film_poster.jpg",
+    "duration": 100
+  },
+  {
+    "id": 25,
+    "title": "Dual",
+    "description": "Dual is a 2022 American satirical science fiction thriller film written, directed, and produced by Riley Stearns. It stars Karen Gillan, Beulah Koale, Theo James, and Aaron Paul. The plot follows a woman who has to fight a clone of herself to the death after she unexpectedly recovers from a terminal illness. The film premiered at the 2022 Sundance Film Festival on January 22, 2022. It was released in the United States on April 15, 2022, by RLJE Films.",
+    "genres": [{ "id": 3 }, { "id": 7 }],
+    "cast": [{ "id": 80 }, { "id": 81 }, { "id": 82 }, { "id": 83 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d1/Dual_%282022_film%29.jpg",
+    "duration": 98
+  },
+  {
+    "id": 26,
+    "title": "The Ice Age Adventures of Buck Wild",
+    "description": "The Ice Age Adventures of Buck Wild is a 2022 computer-animated adventure comedy film directed by John C. Donkin, in his feature directorial debut, with a screenplay by Jim Hecht, Ray DeLaurentis, and William Schifrin. It serves as a spin-off of the Ice Age franchise and is set after the events of Ice Age: Collision Course. The film stars the voices of Simon Pegg, Vincent Tong, Aaron Harris, Utkarsh Ambudkar, and Justina Machado also starring in the film.",
+    "genres": [{ "id": 8 }, { "id": 17 }, { "id": 4 }],
+    "cast": [{ "id": 84 }, { "id": 85 }, { "id": 86 }, { "id": 87 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/0/0f/The_Ice_Age_Adventures_of_Buck_Wild.jpg",
+    "duration": 157
+  },
+  {
+    "id": 27,
+    "title": "Mass",
+    "description": "Mass is a 2021 American drama film written and directed by Fran Kranz in his directorial debut. It stars Reed Birney, Ann Dowd, Jason Isaacs, and Martha Plimpton as grieving parents who meet to discuss a tragedy involving their sons. The film had its world premiere at the 2021 Sundance Film Festival on January 30, 2021, and was released on October 8, 2021, by Bleecker Street. At the BAFTA Awards, Dowd received a nomination for Best Actress in a Supporting Role.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 88 }, { "id": 89 }, { "id": 90 }, { "id": 91 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/5e/Mass_2021_film.jpg",
+    "duration": 125
+  },
+  {
+    "id": 28,
+    "title": "City of Lies",
+    "description": "City of Lies is a 2018 crime thriller film about the investigations by the Los Angeles Police Department of the murders of rappers Tupac Shakur and the Notorious B.I.G. It is directed by Brad Furman, with a screenplay by Christian Contreras based on the non-fiction book LAbyrinth by Randall Sullivan. The film stars Johnny Depp as retired LAPD detective Russell Poole and Forest Whitaker as journalist Jack Jackson, with Rockmond Dunbar and Neil Brown Jr. also starring.",
+    "genres": [{ "id": 6 }, { "id": 7 }],
+    "cast": [{ "id": 92 }, { "id": 93 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/42/City_of_Lies_poster.jpeg",
+    "duration": 144
+  },
+  {
+    "id": 29,
+    "title": "Vivarium",
+    "description": "Vivarium is a 2019 science fiction film directed by Lorcan Finnegan, from a story by Finnegan and Garret Shanley. An international co-production between Ireland, Denmark and Belgium, it stars Imogen Poots and Jesse Eisenberg. It premiered at the Cannes Film Festival on 18 May 2019, and was released in Ireland on 27 March 2020 by Vertigo Releasing. The film follows a couple that is forced to care for a mysterious child while trapped in a seemingly perfect neighbourhood.",
+    "genres": [{ "id": 3 }],
+    "cast": [{ "id": 94 }, { "id": 95 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/1/11/Vivarium_film_theatrical_poster.jpg",
+    "duration": 89
+  },
+  {
+    "id": 30,
+    "title": "Spiral",
+    "description": "Spiral is a 2021 American horror film directed by Darren Lynn Bousman and written by Josh Stolberg and Peter Goldfinger. It is the ninth installment and spinoff of the Saw film series. The film stars Chris Rock, Max Minghella, Marisol Nichols, and Samuel L. Jackson, and follows police efforts to stop a Jigsaw copycat killer. The original creators of the series, James Wan and Leigh Whannell, as well as Rock and series veteran Kevin Greutert, serve as executive producers.",
+    "genres": [{ "id": 1 }],
+    "cast": [{ "id": 96 }, { "id": 97 }, { "id": 98 }, { "id": 99 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/e/e4/Spiral_Official_Poster.jpg",
+    "duration": 133
+  },
+  {
+    "id": 31,
+    "title": "A Love Song",
+    "description": "A Love Song is a 2022 American drama film written, directed, produced, and co-edited by Max Walker-Silverman in his feature directorial debut. It stars Dale Dickey and Wes Studi as two childhood friends who spend a night together by a lake in the mountains. The film premiered at the Sundance Film Festival on January 20, 2022, and was released in the United States on July 29, 2022, by Bleecker Street and Stage 6 Films. It received generally positive reviews from critics.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 100 }, { "id": 101 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c4/A_Love_Song_%28film%29.jpg",
+    "duration": 113
+  },
+  {
+    "id": 32,
+    "title": "The Silent Twins",
+    "description": "The Silent Twins is a 2022 internationally co-produced biographical drama film about the twin sisters, June and Jennifer Gibbons, who were institutionalized at Broadmoor Hospital following years of silence and teenage rebellion. It was directed by Agnieszka Smoczyńska from a screenplay by Andrea Seigel, who adapted the book of the same name by Marjorie Wallace. The film stars Letitia Wright, Tamara Lawrance, Nadine Marshall, Treva Etienne, Michael Smiley, and Jodhi May.",
+    "genres": [{ "id": 5 }, { "id": 19 }],
+    "cast": [{ "id": 102 }, { "id": 103 }, { "id": 104 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/3b/The_Silent_Twins_%282022_film%29.jpg",
+    "duration": 103
+  },
+  {
+    "id": 33,
+    "title": "Shirley",
+    "description": "Shirley is a 2020 American biographical drama film, directed by Josephine Decker, from a screenplay by Sarah Gubbins, based upon the 2014 novel of the same name by Susan Scarf Merrell, which formed a \"largely fictional story\" around novelist Shirley Jackson's real life during the time period she was writing her 1951 novel Hangsaman. The film stars Elisabeth Moss as Jackson with Michael Stuhlbarg, Odessa Young and Logan Lerman. Martin Scorsese serves as an executive producer.",
+    "genres": [{ "id": 5 }, { "id": 19 }],
+    "cast": [{ "id": 105 }, { "id": 106 }, { "id": 107 }, { "id": 108 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/3/30/Shirley_poster.jpeg",
+    "duration": 121
+  },
+  {
+    "id": 34,
+    "title": "Deep Blue Sea 3",
+    "description": "Deep Blue Sea 3 is a 2020 American science fiction natural horror film, starring Tania Raymonde. Dr. Emma Collins and her team are on Little Happy Island studying the effect of climate change on great white sharks who come to the nearby nursery every year to give birth, their peaceful life is disrupted when a \"scientific\" team shows up looking for three bull sharks. It is the third and final installment of the Deep Blue Sea film series, and a direct sequel to Deep Blue Sea 2.",
+    "genres": [{ "id": 1 }, { "id": 3 }],
+    "cast": [{ "id": 109 }, { "id": 110 }, { "id": 111 }, { "id": 112 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/98/Deep_Blue_Sea_3.jpg",
+    "duration": 137
+  },
+  {
+    "id": 35,
+    "title": "Three Thousand Years of Longing",
+    "description": "Three Thousand Years of Longing is a 2022 fantasy romantic drama film directed and produced by George Miller. Written by Miller and Augusta Gore, it is based on the short story \"The Djinn in the Nightingale's Eye\" by A. S. Byatt and stars Idris Elba as a djinn who is unleashed from a bottle by a professor and tells her stories from his thousands of years of existence. The film is dedicated to Miller's mother Angela, as well as Rena Mitchell, relative of producer Doug Mitchell.",
+    "genres": [{ "id": 5 }, { "id": 9 }, { "id": 13 }],
+    "cast": [{ "id": 21 }, { "id": 113 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/27/Three_Thousand_Years_of_Longing.jpeg",
+    "duration": 123
+  },
+  {
+    "id": 36,
+    "title": "Emily the Criminal",
+    "description": "Emily the Criminal is a 2022 American crime thriller film written and directed by John Patton Ford in his feature directorial debut. It stars Aubrey Plaza as the title character, with Theo Rossi, Megalyn Echikunwoke, and Gina Gershon in supporting roles. The film follows Emily Benetto, a young woman saddled with student debt and locked out of the job market due to a minor criminal record, who gets involved in a credit card scam that pulls her into the criminal underworld of Los Angeles.",
+    "genres": [{ "id": 6 }, { "id": 7 }],
+    "cast": [{ "id": 114 }, { "id": 115 }, { "id": 116 }, { "id": 117 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/58/Emily_the_Criminal.jpg",
+    "duration": 88
+  },
+  {
+    "id": 37,
+    "title": "Ambulance",
+    "description": "Ambulance is a 2022 American action thriller film directed and co-produced by Michael Bay and written by Chris Fedak. A co-production between New Republic Pictures, Project X Entertainment and Bay Films, it is based on the 2005 Danish film of the same name by Laurits Munch-Petersen and Lars Andreas Pedersen. It stars Jake Gyllenhaal, Yahya Abdul-Mateen II, and Eiza González and follows two adoptive siblings turned bank robbers who hijack an ambulance and take two first responders hostage.",
+    "genres": [{ "id": 2 }, { "id": 7 }],
+    "cast": [{ "id": 118 }, { "id": 119 }, { "id": 120 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d2/Ambulance_film_poster.jpg",
+    "duration": 145
+  },
+  {
+    "id": 38,
+    "title": "Cats & Dogs 3: Paws Unite!",
+    "description": "Cats & Dogs 3: Paws Unite! is a 2020 American spy action comedy film, starring the voices of Melissa Rauch, Max Greenfield, and George Lopez. It is a stand-alone sequel to 2010's Cats & Dogs: The Revenge of Kitty Galore and the third and final film of the Cats & Dogs film series. Unlike the first two installments, Paws Unite! was released straight to video in the United States on September 15, 2020. It is also the only film that does not feature any cast members from the previous installments.",
+    "genres": [{ "id": 2 }, { "id": 4 }, { "id": 14 }],
+    "cast": [{ "id": 121 }, { "id": 122 }, { "id": 123 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a6/Cats_%26_Dogs_3_Paws_Unite%21_poster.jpeg",
+    "duration": 105
+  },
+  {
+    "id": 39,
+    "title": "Spiderhead",
+    "description": "Spiderhead is a 2022 American science fiction psychological thriller film directed by Joseph Kosinski, with a screenplay by Rhett Reese and Paul Wernick, based on the dystopian short story \"Escape from Spiderhead\" by George Saunders and first published in The New Yorker. The film stars Chris Hemsworth, Miles Teller, and Jurnee Smollett. The story follows inmates in a luxurious prison who participate in experiments involving mind-altering drugs. Principal photography took place in Australia in 2020.",
+    "genres": [{ "id": 3 }, { "id": 7 }],
+    "cast": [{ "id": 124 }, { "id": 125 }, { "id": 126 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/5/58/Spiderhead.jpg",
+    "duration": 95
+  },
+  {
+    "id": 40,
+    "title": "Billie Eilish: The World's a Little Blurry",
+    "description": "Billie Eilish: The World's a Little Blurry is a 2021 American documentary film directed by R. J. Cutler and centered around singer-songwriter Billie Eilish. The film details Eilish's rise to fame since the release of her 2016 single \"Ocean Eyes\" and the creative process behind Eilish's debut studio album When We All Fall Asleep, Where Do We Go? (2019), with the title referencing a lyric from the album track \"Ilomilo\". The film was released in select theaters via Neon and on Apple TV+ on February 26, 2021.",
+    "genres": [{ "id": 20 }],
+    "cast": [{ "id": 127 }, { "id": 128 }, { "id": 129 }, { "id": 130 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d9/Billie_Eilish_-_The_World%27s_a_Little_Blurry.png",
+    "duration": 107
+  },
+  {
+    "id": 41,
+    "title": "Malcolm & Marie",
+    "description": "Malcolm & Marie is a 2021 American black-and-white romantic drama film written, co-produced and directed by Sam Levinson. The film stars Zendaya and John David Washington and follows a writer-director and his girlfriend whose relationship is tested on the night of his latest film's premiere when revelations about themselves surface. The project was the first Hollywood feature to be entirely written, financed, and produced during the COVID-19 pandemic, with filming taking place in secret in June and July 2020.",
+    "genres": [{ "id": 5 }, { "id": 13 }],
+    "cast": [{ "id": 131 }, { "id": 132 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d2/Malcolm_and_Marie_poster.jpeg",
+    "duration": 141
+  },
+  {
+    "id": 42,
+    "title": "The Half of It",
+    "description": "The Half of It is a 2020 American coming-of-age comedy-drama film written and directed by Alice Wu. It stars Leah Lewis, Daniel Diemer, and Alexxis Lemire, with Enrique Murciano, Wolfgang Novogratz, Catherine Curtin, Becky Ann Baker, and Collin Chou in supporting roles. Teenager Ellie Chu agrees to write a love letter for a jock while falling for his crush. Netflix released the film on May 1, 2020, to positive reviews. The film received the Founders Award for Best Narrative Feature at the 2020 Tribeca Film Festival.",
+    "genres": [{ "id": 4 }, { "id": 5 }],
+    "cast": [{ "id": 133 }, { "id": 134 }, { "id": 135 }, { "id": 136 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/71/The_Half_of_It_poster.jpeg",
+    "duration": 158
+  },
+  {
+    "id": 43,
+    "title": "Buddy Games",
+    "description": "Buddy Games is a 2019 American comedy film directed by Josh Duhamel in his solo directorial debut and written by Duhamel, Bob Schwartz, and Jude Weng. Produced by Duhamel, Michael J. Luisi, and Weng, the film centers on a group of six friends that reunite after a five-year hiatus to engage in a challenging set of dares and games and help lift one of their own out of depression and also have a chance of winning $150,000 while doing so. The cast includes Duhamel, Dax Shepard, Olivia Munn, Kevin Dillon, and Neal McDonough.",
+    "genres": [{ "id": 4 }],
+    "cast": [{ "id": 137 }, { "id": 138 }, { "id": 139 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/95/The_Buddy_Games_poster.jpg",
+    "duration": 123
+  },
+  {
+    "id": 44,
+    "title": "The Banshees of Inisherin",
+    "description": "The Banshees of Inisherin is a 2022 black tragicomedy film directed, written, and produced by Martin McDonagh. Set on a remote, fictional island off the west coast of Ireland, the film stars Colin Farrell and Brendan Gleeson as two lifelong friends who find themselves at an impasse when one abruptly ends their relationship, with alarming consequences for both of them. Kerry Condon and Barry Keoghan also star. It reunites Farrell and Gleeson, who previously worked together on McDonagh's directorial debut, In Bruges (2008).",
+    "genres": [{ "id": 4 }],
+    "cast": [{ "id": 140 }, { "id": 141 }, { "id": 142 }, { "id": 143 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/6/6e/The_Banshees_of_Inisherin.jpg",
+    "duration": 123
+  },
+  {
+    "id": 45,
+    "title": "A Chiara",
+    "description": "A Chiara is a 2021 Italian-language drama film directed and written by Jonas Carpignano, the third film in his film trilogy set in a Calabrian town, following Mediterranea (2015) and A Ciambra (2017). The film stars Swamy Rotolo, Claudio Rotolo, Grecia Rotolo, and Carmela Fumo and had its world premiere at the Cannes Film Festival on July 9, 2021, in the Directors' Fortnight section, to very positive reviews. Following its festival screening, the film was distributed by MK2 Films and Lucky Red in Italy and Neon in the United States.",
+    "genres": [{ "id": 5 }],
+    "cast": [{ "id": 144 }, { "id": 145 }, { "id": 146 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/b/bd/A_Chiara_poster.jpeg",
+    "duration": 104
+  },
+  {
+    "id": 46,
+    "title": "Family Camp",
+    "description": "Family Camp is a 2022 American religious comedy film directed by Brian Cates and written by Cates and Rene Gutteridge. The film stars Tommy Woodard, Eddie James, Leigh-Allyn Baker, and Gigi Orsillo, and follows two polar-opposite families who are forced to camp together, the fathers' struggles to hold onto their families and marriages as they compete for the coveted camp trophy. The film was released on May 13, 2022 in the United States, by Roadside Attractions. The film received mixed reviews and grossed $4 million at the box office.",
+    "genres": [{ "id": 4 }],
+    "cast": [{ "id": 147 }, { "id": 148 }, { "id": 149 }, { "id": 150 }],
+    "year": 2022,
+    "image": "https://upload.wikimedia.org/wikipedia/en/4/40/Family_camp.jpg",
+    "duration": 163
+  },
+  {
+    "id": 47,
+    "title": "The Eyes of Tammy Faye",
+    "description": "The Eyes of Tammy Faye is a 2021 American biographical drama film directed by Michael Showalter from a screenplay by Abe Sylvia, based on the 2000 documentary of the same name by Fenton Bailey and Randy Barbato of World of Wonder. The film tells the story of Tammy Faye Bakker, from her humble beginnings growing up in International Falls, Minnesota, through the rise and fall of her televangelism career and marriage to Jim Bakker. Cherry Jones and Vincent D'Onofrio also star. The film is produced by Chastain's production company, Freckle Films.",
+    "genres": [{ "id": 5 }, { "id": 19 }],
+    "cast": [{ "id": 151 }, { "id": 152 }, { "id": 153 }, { "id": 154 }],
+    "year": 2021,
+    "image": "https://upload.wikimedia.org/wikipedia/en/2/2f/The_Eyes_of_Tammy_Faye_%282021_film%29.jpg",
+    "duration": 120
+  },
+  {
+    "id": 48,
+    "title": "The Night Clerk",
+    "description": "The Night Clerk is a 2020 American crime drama film, written and directed by Michael Cristofer. It stars Tye Sheridan, Ana de Armas, John Leguizamo and Helen Hunt, and follows a hotel night clerk who becomes the center of a murder investigation. The film was released on February 21, 2020, by Saban Films. On June 6, 2020, Netflix released the film on its platform. The film has received negative reviews from critics who criticized it for its lackluster story, deriative, and undeveloped characters; however, Sheridan's performance did receive praise.",
+    "genres": [{ "id": 6 }, { "id": 5 }],
+    "cast": [{ "id": 155 }, { "id": 156 }, { "id": 157 }, { "id": 158 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/9f/The_Night_Clerk_poster.jpeg",
+    "duration": 106
+  },
+  {
+    "id": 49,
+    "title": "The Last Days of American Crime",
+    "description": "The Last Days of American Crime is a 2020 American action thriller film directed by Olivier Megaton from a screenplay written by Karl Gajdusek, based on Rick Remender and Greg Tocchini's 2009 graphic novel of the same name. It stars Édgar Ramírez, Anna Brewster, Michael Pitt, Patrick Bergin, and Sharlto Copley. It was panned by critics, who noted the film's release as unfortunate for coinciding with the George Floyd protests, due to its violent content and depictions of police brutality, and as of October 2021 holds a 0% rating on Rotten Tomatoes.",
+    "genres": [{ "id": 2 }, { "id": 7 }],
+    "cast": [{ "id": 159 }, { "id": 160 }, { "id": 161 }, { "id": 24 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/7/77/The_Last_Days_of_American_Crime_poster.png",
+    "duration": 169
+  },
+  {
+    "id": 50,
+    "title": "Yellow Rose",
+    "description": "Yellow Rose is a 2019 American-Filipino musical drama film co-written and directed by Diane Paragas. It is produced by Cecilia R. Mejia, Diane Paragas, Rey Cuerdo, Orian Williams, and Jeremiah Abraham. The film stars Eva Noblezada, Dale Watson, Princess Punzalan, and Lea Salonga. The plot follows Rose, a Filipina undocumented immigrant, who dreams of leaving her small town in Texas to pursue her country music dreams. Her plan is put on hold when her mother is taken by Immigration and Customs Enforcement and Rose is forced to flee to Austin, Texas.",
+    "genres": [{ "id": 5 }, { "id": 18 }],
+    "cast": [{ "id": 162 }, { "id": 163 }, { "id": 164 }, { "id": 165 }],
+    "year": 2020,
+    "image": "https://upload.wikimedia.org/wikipedia/en/d/d3/Yellow_Rose_Poster.jpg",
+    "duration": 170
+  }
+]

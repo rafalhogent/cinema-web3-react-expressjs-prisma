@@ -14,10 +14,10 @@ const Card = (props) => {
         {genres?.map((g) => {
           return (
             <span
-              key={genres.indexOf(g)}
+              key={g.id}
               className=" mr-2 text-xs p-1 sm:bg-cyan-800 text-white"
             >
-              {g}
+              {g.naam}
             </span>
           );
         })}

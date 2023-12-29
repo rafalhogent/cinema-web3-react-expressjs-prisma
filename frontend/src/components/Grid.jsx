@@ -16,9 +16,9 @@ const Grid = (props) => {
             id={item.id}
             title={item.title}
             year={item.year}
-            image={item.thumbnail}
+            image={item.image}
             genres={item.genres}
-            text={item.extract}
+            text={item.description}
           />
         );
       })}

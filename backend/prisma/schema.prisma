@@ -11,11 +11,24 @@ datasource db {
 }
 
 model Film {
-  id Int @id @default(autoincrement())
-  titel String @db.VarChar(100)
-  beschrijving String @db.VarChar(250)
-  genre String @db.VarChar(45)
-  speelduur Int 
-  releasejaar Int @db.SmallInt
-  image String @db.VarChar(255)
+  id          Int     @id @default(autoincrement())
+  title       String  @db.VarChar(200)
+  description String  @db.VarChar(1400)
+  duration    Int
+  year        Int     @db.Year
+  image       String  @db.VarChar(550)
+  genres      Genre[]
+  cast        Actor[]
+}
+
+model Genre {
+  id    Int    @id @default(autoincrement())
+  name  String @db.VarChar(45)
+  films Film[]
+}
+
+model Actor {
+  id    Int    @id @default(autoincrement())
+  name  String @db.VarChar(200)
+  films Film[]
 }

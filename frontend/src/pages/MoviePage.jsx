@@ -26,13 +26,13 @@ const MoviePage = () => {
         <div className="lg:pr-8 lg:pt-4">
           <div className="lg:max-w-lg">
             <h2 className="text-base font-semibold leading-7 text-indigo-600"></h2>
-            {movie?.genres.map((genre, idx) => {
+            {movie?.genres?.map((genre, idx) => {
               return (
                 <span
-                  key={idx}
+                  key={genre.id}
                   className="mr-8 text-base font-semibold leading-7 text-indigo-600"
                 >
-                  {genre}
+                  {genre.name}
                 </span>
               );
             })}
@@ -42,16 +42,16 @@ const MoviePage = () => {
             </p>
 
             <p className="mt-6 text-md leading-8 text-gray-600">
-              {movie?.extract}
+              {movie?.description}
             </p>
           </div>
           <h4 className="mt-5 mb-3 font-bold">cast:</h4>
-          {movie?.cast.map((a) => {
-            return <div key={movie?.cast.indexOf(a)}>{a}</div>;
+          {movie?.cast?.map((a) => {
+            return <div key={a.id}>{a.name}</div>;
           })}
         </div>
         <img
-          src={movie?.thumbnail}
+          src={movie?.image}
           alt="Poster"
           className=" object-cover w-80 lg:h-100"
         />
