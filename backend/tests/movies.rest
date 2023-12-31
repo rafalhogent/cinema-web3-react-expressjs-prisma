@@ -1,0 +1,8 @@
+
+### Get movie by id
+GET {{BASE_URL}}:{{APP_PORT}}/movies/2 
+Authorization: {{$global.TOKEN}}
+
+### Get all movies
+GET {{BASE_URL}}:{{APP_PORT}}/movies/
+Authorization: {{$global.TOKEN}}

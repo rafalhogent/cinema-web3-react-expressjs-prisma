@@ -1,0 +1,36 @@
+
+### Get users
+GET {{BASE_URL}}:{{APP_PORT}}/users/
+
+### Get user info
+GET {{BASE_URL}}:{{APP_PORT}}/users/info
+Authorization: {{$global.TOKEN}}
+
+
+### Register
+POST {{BASE_URL}}:{{APP_PORT}}/users/register
+Content-Type: application/json
+
+{
+    "firstname": "Rafi",
+    "lastname": "Linux",
+    "email": "rafi@linux.be",
+    "password": "haslo123"
+}
+{{     
+  $global.TOKEN=response.parsedBody.token;
+}}
+
+
+### Login
+POST {{BASE_URL}}:{{APP_PORT}}/users/login
+Content-Type: application/json
+
+{
+    "email": "myszka@linux.be",
+    "password": "haslo123"
+}
+
+{{     
+  $global.TOKEN=response.parsedBody.token;
+}}

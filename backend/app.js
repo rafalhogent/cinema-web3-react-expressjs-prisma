@@ -24,4 +24,5 @@ app.use("/movies", moviesRouter);
 
 module.exports = app;
 
-app.listen(3001, () => console.log("Server Started"))
+app.listen(process.env.APP_PORT, () => 
+console.log(`Server running at port ${process.env.APP_PORT}`))
