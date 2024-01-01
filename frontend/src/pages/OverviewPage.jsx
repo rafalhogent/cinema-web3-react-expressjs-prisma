@@ -15,10 +15,14 @@ const OverviewPage = () => {
     }
   }, []);
 
-  const loadMovies = () => {
-    getAllMovies().then((resp) => {
-      setMovies(resp);
-    });
+  const loadMovies = async () => {
+    getAllMovies()
+      .catch((err) => {
+        console.log("error when loading movies", err);
+      })
+      .then((resp) => {
+        setMovies(resp);
+      });
   };
 
   const filteredMovies = useMemo(() => {
@@ -51,7 +55,7 @@ const OverviewPage = () => {
           onChange={(e) => handleSearchChange(e)}
         />
       </div>
-      {filteredMovies.length ? (
+      {filteredMovies?.length ? (
         <CardsGrid items={filteredMovies} />
       ) : (
         <div className="flex flex-row items-center justify-center m-10">

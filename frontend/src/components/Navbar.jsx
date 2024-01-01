@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className="bg-slate-600 p-4 flex justify-around text-white">
       <NavLink
-        to="/"
+        to="/overview"
         className={({ isActive }) =>
           isActive ? "underline underline-offset-8" : "no-underline"
         }
@@ -20,6 +20,13 @@ const Navbar = () => {
         }
       >
         About
+      </NavLink>
+
+      <NavLink
+        to="/logout"
+        className="no-underline"
+      >
+        Logout
       </NavLink>
     </div>
   );

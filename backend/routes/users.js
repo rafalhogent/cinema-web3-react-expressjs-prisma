@@ -43,9 +43,15 @@ router.post(
         },
       });
 
+      // token
       const token = generateAccessToken(user);
-
-      res.json({ token });
+      res.cookie("cookietoken", token, {
+        httpOnly: true,
+        secure: false,
+        maxAge: 1000 * 60 * 10,
+        sameSite: "strict",
+      });
+      res.status(200).json({ email: user.email });
     } catch (error) {
       console.log(error.message);
       res.status(500).send("Error while registration.");
@@ -72,10 +78,27 @@ router.post("/login", [bodyParser.json()], async (req, res) => {
 
     // token
     const token = generateAccessToken(user);
-    res.json({ token });
+    // res.json({ token });
+    res.cookie("cookietoken", token, {
+      httpOnly: true,
+      secure: false,
+      maxAge: 1000 * 60 * 10,
+      sameSite: "strict",
+    });
+    res.status(200).json({ email: user.email });
   } catch (error) {
     console.log(error.message);
     res.status(500).send("Login failed.");
+  }
+});
+
+/* logout */
+router.delete("/logout", [authorization], async (req, res) => {
+  try {
+    res.clearCookie("cookietoken", { sameSite: "strict" }).end();
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).send("Logout failed");
   }
 });
 

@@ -4,7 +4,6 @@ GET {{BASE_URL}}:{{APP_PORT}}/users/
 
 ### Get user info
 GET {{BASE_URL}}:{{APP_PORT}}/users/info
-Authorization: {{$global.TOKEN}}
 
 
 ### Register
@@ -17,9 +16,6 @@ Content-Type: application/json
     "email": "rafi@linux.be",
     "password": "haslo123"
 }
-{{     
-  $global.TOKEN=response.parsedBody.token;
-}}
 
 
 ### Login
@@ -31,6 +27,8 @@ Content-Type: application/json
     "password": "haslo123"
 }
 
-{{     
-  $global.TOKEN=response.parsedBody.token;
-}}
+
+
+### Logout
+DELETE {{BASE_URL}}:{{APP_PORT}}/users/logout
+Content-Type: application/json

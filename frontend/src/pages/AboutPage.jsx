@@ -1,6 +1,7 @@
 import React from "react";
 
 const AboutPage = () => {
+  const userSession = JSON.parse(sessionStorage.getItem('appuser')) ;
   return (
     <div>
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
@@ -9,6 +10,7 @@ const AboutPage = () => {
             cinema
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600">v 0.1</p>
+          <h2>{userSession?.email}</h2>
         </div>
       </main>
     </div>

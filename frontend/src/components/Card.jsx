@@ -6,7 +6,7 @@ const Card = (props) => {
   const navigate = useNavigate();
   return (
     <div
-      onClick={() => navigate(`movie/${id}`)}
+      onClick={() => navigate(`/movie/${id}`)}
       className="my-2 flex flex-col overflow-clip cursor-pointer"
     >
       <img className="object-cover mb-2 " src={image} />
