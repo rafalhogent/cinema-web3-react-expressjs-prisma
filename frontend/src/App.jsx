@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React, { useEffect, useRef } from "react";
+import { getUser } from "./utils/appauth";
 
 const App = () => {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ const App = () => {
   useEffect(() => {
     if (!isLoaded.current) {
       isLoaded.current = true;
-      const sessionUser = sessionStorage.getItem("appuser");
+      const sessionUser = getUser();
       if (!sessionUser) {
         navigate("/login");
       } else {

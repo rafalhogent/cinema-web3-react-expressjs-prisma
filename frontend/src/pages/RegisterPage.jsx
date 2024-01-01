@@ -3,6 +3,7 @@ import Axios from "axios";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { setupUser } from "../utils/appauth";
 const backend_url = import.meta.env.VITE_BACKEND_BASE_URL;
 
 const RegisterPage = () => {
@@ -20,8 +21,8 @@ const RegisterPage = () => {
   const { values, handleChange, handleSubmit, errors, isValid, dirty } =
     useFormik({
       initialValues: {
-        firstname:"",
-        lastname:"",
+        firstname: "",
+        lastname: "",
         email: "",
         password: "",
       },
@@ -37,11 +38,11 @@ const RegisterPage = () => {
   };
 
   const handleRegister = async (credentials) => {
-    console.log('creds', credentials);
+    console.log("creds", credentials);
     const res = await Axios.post(`${backend_url}/users/register`, credentials, {
       withCredentials: true,
     });
-    sessionStorage.setItem("appuser", JSON.stringify(res.data));
+    setupUser(res.data);
     navigate("/overview");
   };
   return (
@@ -62,7 +63,6 @@ const RegisterPage = () => {
               placeholder="Your first name"
               value={values.firstname}
               onChange={handleChange}
-
             />
           </div>
           <div className="mb-4">

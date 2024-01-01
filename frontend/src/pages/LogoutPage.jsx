@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import Axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { clearStorage } from "../utils/appauth";
+
 const backend_url = import.meta.env.VITE_BACKEND_BASE_URL;
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -11,7 +13,7 @@ const LoginPage = () => {
     const res = await Axios.delete(`${backend_url}/users/logout`, {
       withCredentials: true,
     });
-    sessionStorage.clear();
+    clearStorage();
     navigate("/");
   };
   return (

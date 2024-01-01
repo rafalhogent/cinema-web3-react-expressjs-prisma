@@ -1,7 +1,8 @@
 import React from "react";
+import { getUser } from "../utils/appauth";
 
 const AboutPage = () => {
-  const userSession = JSON.parse(sessionStorage.getItem('appuser')) ;
+  const userSession = getUser();
   return (
     <div>
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
