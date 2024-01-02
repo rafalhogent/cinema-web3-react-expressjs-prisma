@@ -1,47 +1,49 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import CardsGrid from "../components/Grid";
+import Spinner from "../components/Spinner";
 import { getAllMovies } from "../services/movies.service";
+import {handleError} from "../utils/handleError";
 import debounce from "debounce";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 
 const OverviewPage = () => {
-  const [movies, setMovies] = useState([]);
   const [searchTxt, setSearchTxt] = useState("");
   const navigate = useNavigate();
-  const isLoaded = useRef(false);
+
+  const { data, isLoading, isFetching, error, isError } = useQuery({
+    queryKey: ["fetchMovies"],
+    queryFn: getAllMovies,
+    initialData: [],
+    enabled: true,
+    retry: false,
+  });
 
   useEffect(() => {
-    if (!isLoaded.current) {
-      loadMovies();
-      isLoaded.current = true;
-    }
-  }, []);
-
-  const loadMovies = async () => {
-    getAllMovies()
-      .catch((err) => {
-        navigate('/login');
-      })
-      .then((resp) => {
-        setMovies(resp);
-      });
-  };
+    handleError(isError, error, navigate);
+  }, [isError]);
 
   const filteredMovies = useMemo(() => {
     const txt = searchTxt.toLowerCase();
-    return movies?.filter(
+    return data?.filter(
       (m) =>
         m.title?.toLowerCase().includes(txt) ||
         m.extract?.toLowerCase().includes(txt) ||
         m.genres?.some((g) => g.toLowerCase().includes(txt))
     );
-  }, [movies, searchTxt]);
+  }, [data, searchTxt]);
 
   const handleSearchChange = (e) => {
     debounce(() => {
       setSearchTxt(e.target.value);
     }, 500).apply();
   };
+
+  if (isLoading || isFetching) {
+    return <Spinner />;
+  }
+
+  // handleError(isError, error, navigate);
 
   return (
     <div>

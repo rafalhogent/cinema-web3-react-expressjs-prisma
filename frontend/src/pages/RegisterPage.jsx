@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
@@ -8,6 +8,7 @@ import { userService } from "../services/user.service";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
+  const [errMsg, setErrMsg] = useState(null);
   const validationScheme = Yup.object().shape({
     firstname: Yup.string().min(2),
     lastname: Yup.string().min(2),
@@ -27,7 +28,6 @@ const RegisterPage = () => {
         password: "",
       },
       onSubmit: (values) => {
-        // POST request -> React Query -> Axios
         handleRegister(values);
       },
       validationSchema: validationScheme,
@@ -41,8 +41,17 @@ const RegisterPage = () => {
     userService.register(credentials).then((res) => {
       setupUser(res.data);
       navigate("/overview");
+    }).catch(err => {
+      if (err.response.status === 409) {
+        setErrMsg("Email already in use")
+      }
     });
   };
+
+  const onFieldsChange = (e) => {
+    setErrMsg(null);
+    handleChange(e);
+  }
   return (
     <div className="bg-gray-500 flex items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
@@ -87,7 +96,7 @@ const RegisterPage = () => {
               className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
               placeholder="example@hogent.be"
               value={values.email}
-              onChange={handleChange}
+              onChange={onFieldsChange}
             />
             {errors.email != null ? (
               <p className="text-sm text-red-600 my-1">{errors.email}</p>
@@ -122,6 +131,7 @@ const RegisterPage = () => {
             fullWidth={true}
             bold={true}
           />
+             <div className="text-sm text-red-600 my-1">{errMsg}</div>
           <div className="my-8 ">
             <p className="inline-block text-sm">Already have an account?</p>
             <TButton

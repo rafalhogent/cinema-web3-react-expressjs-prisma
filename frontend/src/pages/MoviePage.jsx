@@ -1,25 +1,34 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { getMovieById } from "../services/movies.service";
+import { handleError } from "../utils/handleError";
+import { useNavigate } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import Spinner from "../components/Spinner";
 
 const MoviePage = () => {
   const { id } = useParams();
-  const [movie, setMovie] = useState(null);
-  const isLoaded = useRef(false);
+  const navigate = useNavigate();
 
-  const loadMovie = () => {
-    getMovieById(id).then((res) => {
-      setMovie(res);
-    });
-  };
+  const { data, isLoading, isFetching, error, isError } = useQuery({
+    queryKey: ["fetchMovie"],
+    queryFn: () => getMovieById(id),
+    initialData: null,
+    enabled: true,
+    retry: false,
+  });
 
   useEffect(() => {
-    if (!isLoaded.current) {
-      loadMovie();
-    }
-    isLoaded.current = true;
-  }, []);
+    handleError(isError, error, navigate);
+  }, [isError]);
 
+  const movie = useMemo(() => {
+    return data;
+  }, [data, error]);
+
+  if (isLoading || isFetching) {
+    return <Spinner />;
+  }
   return (
     <div className="m-6 2xl:mx-60">
       <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">

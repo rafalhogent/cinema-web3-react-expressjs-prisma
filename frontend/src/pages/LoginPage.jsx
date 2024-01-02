@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { setupUser } from "../utils/appauth";
 import { userService } from "../services/user.service";
 import TButton from "../components/TButton";
-
-const backend_url = import.meta.env.VITE_BACKEND_BASE_URL;
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -17,7 +15,7 @@ const LoginPage = () => {
       .lowercase(),
     password: Yup.string().min(6).required(),
   });
-
+  const [errMsg, setErrMsg] = useState(null);
   const { values, handleChange, handleSubmit, errors, isValid, dirty } =
     useFormik({
       initialValues: {
@@ -25,10 +23,13 @@ const LoginPage = () => {
         password: "",
       },
       onSubmit: (values) => {
-        // POST request -> React Query -> Axios
         userService.login(values).then((res) => {
           setupUser(res.data);
           navigate("/overview");
+        }).catch(err => {
+          if (err.response.status === 401 || err.response.status === 404) {
+            setErrMsg("Invalid credentials")
+          }
         });
       },
       validationSchema: validationScheme,
@@ -37,6 +38,11 @@ const LoginPage = () => {
   const goToRegisterPage = () => {
     navigate("/register");
   };
+
+  const onFieldsChange = (e) => {
+    setErrMsg(null);
+    handleChange(e);
+  }
 
   return (
     <div className="bg-gray-500 flex items-center justify-center h-screen">
@@ -56,7 +62,7 @@ const LoginPage = () => {
               className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
               placeholder="example@hogent.be"
               value={values.email}
-              onChange={handleChange}
+              onChange={onFieldsChange}
             />
             {errors.email != null ? (
               <p className="text-sm text-red-600 my-1">{errors.email}</p>
@@ -74,7 +80,7 @@ const LoginPage = () => {
               className="form-input w-full px-4 py-2 border rounded-lg text-gray-700 focus:ring-blue-500"
               placeholder="••••••••"
               value={values.password}
-              onChange={handleChange}
+              onChange={onFieldsChange}
             />
             {errors.password != null ? (
               <p className="text-sm text-red-600 my-1">{errors.password}</p>
@@ -91,6 +97,7 @@ const LoginPage = () => {
             fullWidth={true}
             bold={true}
           />
+          <div className="text-sm text-red-600 my-1">{errMsg}</div>
           <div className="my-8 ">
             <p className="inline-block text-sm">Don't have account?</p>
             <TButton

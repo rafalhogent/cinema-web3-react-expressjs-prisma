@@ -11,7 +11,7 @@ import MoviePage from './pages/MoviePage.jsx';
 import LoginPage from './pages/LoginPage.jsx';
 import LogoutPage from './pages/LogoutPage.jsx';
 import RegisterPage from './pages/RegisterPage.jsx';
-
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const router = createBrowserRouter([
   {
@@ -54,8 +54,12 @@ const router = createBrowserRouter([
   }
 ])
 
+const queryClient = new QueryClient();
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
     <RouterProvider router={router}/>
+    </QueryClientProvider>
   </React.StrictMode>,
 )
