@@ -1,8 +1,7 @@
 const jwt = require("jsonwebtoken");
 
-module.exports = async (req, res, next) => {
-  const cookieToken = req.cookies["cookietoken"];
-  const token = cookieToken;
+const authorization = async (req, res, next) => {
+  const token = req.cookies["cookietoken"];
   if (!token) return res.sendStatus(401);
   await jwt.verify(token, process.env.SECRET_TOKEN, (err, user) => {
     if (err) return res.sendStatus(403);
@@ -10,3 +9,8 @@ module.exports = async (req, res, next) => {
     next();
   });
 };
+
+
+module.exports = {
+  authorization
+}
