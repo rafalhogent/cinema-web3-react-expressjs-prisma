@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import Axios from "axios";
+import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { setupUser } from "../utils/appauth";
-const backend_url = import.meta.env.VITE_BACKEND_BASE_URL;
+import TButton from "../components/TButton";
+import { userService } from "../services/user.service";
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -38,15 +38,13 @@ const RegisterPage = () => {
   };
 
   const handleRegister = async (credentials) => {
-    console.log("creds", credentials);
-    const res = await Axios.post(`${backend_url}/users/register`, credentials, {
-      withCredentials: true,
+    userService.register(credentials).then((res) => {
+      setupUser(res.data);
+      navigate("/overview");
     });
-    setupUser(res.data);
-    navigate("/overview");
   };
   return (
-    <div className="bg-gray-100 flex items-center justify-center h-screen">
+    <div className="bg-gray-500 flex items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         <h2 className="text-2xl font-semibold text-center mb-4">Register</h2>
 
@@ -117,22 +115,20 @@ const RegisterPage = () => {
               </p>
             )}
           </div>
-          <button
+          <TButton
             type="submit"
-            className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 "
-          >
-            Submit
-          </button>
+            color={"primary"}
+            label="Submit"
+            fullWidth={true}
+            bold={true}
+          />
           <div className="my-8 ">
-            {" "}
             <p className="inline-block text-sm">Already have an account?</p>
-            <button
-              onClick={goToLoginPage}
-              type="button"
-              className="mx-3 w-50 px-4 py-2 rounded-lg hover:bg-green-600 outline-2 focus:ring-2 focus:ring-opacity-50 inline-block"
-            >
-              Login
-            </button>
+            <TButton
+              label="Login"
+              color={"secondary"}
+              clickAction={goToLoginPage}
+            />
           </div>
         </form>
       </div>

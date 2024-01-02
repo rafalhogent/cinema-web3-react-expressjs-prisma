@@ -2,10 +2,12 @@ import React, { useMemo, useState, useEffect, useRef } from "react";
 import CardsGrid from "../components/Grid";
 import { getAllMovies } from "../services/movies.service";
 import debounce from "debounce";
+import { useNavigate } from "react-router-dom";
 
 const OverviewPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchTxt, setSearchTxt] = useState("");
+  const navigate = useNavigate();
   const isLoaded = useRef(false);
 
   useEffect(() => {
@@ -18,7 +20,7 @@ const OverviewPage = () => {
   const loadMovies = async () => {
     getAllMovies()
       .catch((err) => {
-        console.log("error when loading movies", err);
+        navigate('/login');
       })
       .then((resp) => {
         setMovies(resp);

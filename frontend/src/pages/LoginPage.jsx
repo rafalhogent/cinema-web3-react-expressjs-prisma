@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import Axios from "axios";
+import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
 import { setupUser } from "../utils/appauth";
+import { userService } from "../services/user.service";
+import TButton from "../components/TButton";
 
 const backend_url = import.meta.env.VITE_BACKEND_BASE_URL;
 
@@ -25,7 +26,10 @@ const LoginPage = () => {
       },
       onSubmit: (values) => {
         // POST request -> React Query -> Axios
-        handleLogin(values);
+        userService.login(values).then((res) => {
+          setupUser(res.data);
+          navigate("/overview");
+        });
       },
       validationSchema: validationScheme,
     });
@@ -34,18 +38,12 @@ const LoginPage = () => {
     navigate("/register");
   };
 
-  const handleLogin = async (credentials) => {
-    const res = await Axios.post(`${backend_url}/users/login`, credentials, {
-      withCredentials: true,
-    });
-    // localStorage.setItem("appuser", JSON.stringify(res.data));
-    setupUser(res.data);
-    navigate("/overview");
-  };
   return (
-    <div className="bg-gray-100 flex items-center justify-center h-screen">
+    <div className="bg-gray-500 flex items-center justify-center h-screen">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
-        <h2 className="text-2xl font-semibold text-center mb-4">Log in</h2>
+        <h2 className="text-2xl font-semibold text-center mb-4">
+          Log in to Web3 Cinema
+        </h2>
 
         <form onSubmit={handleSubmit} autoComplete="off">
           <div className="mb-4">
@@ -86,22 +84,20 @@ const LoginPage = () => {
               </p>
             )}
           </div>
-          <button
+          <TButton
             type="submit"
-            className="w-full bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-400 "
-          >
-            Submit
-          </button>
+            color={"primary"}
+            label="Submit"
+            fullWidth={true}
+            bold={true}
+          />
           <div className="my-8 ">
-            {" "}
             <p className="inline-block text-sm">Don't have account?</p>
-            <button
-              onClick={goToRegisterPage}
-              type="button"
-              className="mx-3 w-50 px-4 py-2 rounded-lg hover:bg-green-600 outline-2 focus:ring-2 focus:ring-opacity-50 inline-block"
-            >
-              Register
-            </button>
+            <TButton
+              color="secondary"
+              label="Register"
+              clickAction={goToRegisterPage}
+            />
           </div>
         </form>
       </div>

@@ -8,7 +8,7 @@ const getAllMovies = async () => {
     });
     return res.data;
   } catch (error) {
-    console.log('catched-error', error.response.status);
+    throw new Error('fetching movies failed' + error.response.status);
   }
 };
 

@@ -3,7 +3,6 @@ const setupUser = (user) => {
 };
 
 const getUser = () => {
-//   return localStorage.getItem("appuser");
 return JSON.parse(localStorage.getItem('appuser')) ;
 };
 

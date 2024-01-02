@@ -30,6 +30,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
   },
   {
+    element: <LogoutPage/>,
+    path: "/logout",
+    errorElement: <ErrorPage/>,
+  },
+  {
     element: <AppLayout/>,
     errorElement: <ErrorPage/>,
     children: [
@@ -44,10 +49,6 @@ const router = createBrowserRouter([
       {
         path: "/movie/:id",
         element: <MoviePage/>
-      },
-      {
-        path: "/logout",
-        element: <LogoutPage/>
       },
     ]
   }

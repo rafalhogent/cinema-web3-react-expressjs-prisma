@@ -20,8 +20,8 @@ router.post(
   userController.login
 );
 
-router.delete("/logout", [authorization], userController.logout);
-/* user info */
+router.delete("/logout", [], userController.logout);
+
 router.get("/info", [authorization], userController.info);
 
 module.exports = router;
