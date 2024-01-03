@@ -5,7 +5,7 @@ const handleError = (isError, error, navigate) => {
       err.status = 503;
       throw err;
     }
-    if (error.response?.status === 401) {
+    if ([401, 403].includes(error.response?.status)) {
       return navigate("/login");
     }
   }
