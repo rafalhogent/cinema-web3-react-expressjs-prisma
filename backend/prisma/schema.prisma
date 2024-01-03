@@ -11,14 +11,15 @@ datasource db {
 }
 
 model Film {
-  id          Int     @id @default(autoincrement())
-  title       String  @db.VarChar(200)
-  description String  @db.VarChar(1400)
+  id          Int        @id @default(autoincrement())
+  title       String     @db.VarChar(200)
+  description String     @db.VarChar(1400)
   duration    Int
-  year        Int     @db.Year
-  image       String  @db.VarChar(550)
+  year        Int        @db.Year
+  image       String     @db.VarChar(550)
   genres      Genre[]
   cast        Actor[]
+  showtimes   Showtime[]
 }
 
 model Genre {
@@ -39,4 +40,21 @@ model User {
   lastname  String @db.VarChar(150)
   email     String @unique @db.VarChar(200)
   password  String @db.VarChar(255)
+}
+
+model Hall {
+  id        Int        @id @default(autoincrement())
+  name      String     @db.VarChar(100)
+  capacity  Int
+  showtimes Showtime[]
+}
+
+model Showtime {
+  id     Int      @id @default(autoincrement())
+  start  DateTime
+  price  Float
+  hallId Int
+  hall   Hall     @relation(fields: [hallId], references: [id])
+  filmId Int
+  film   Film     @relation(fields: [filmId], references: [id])
 }

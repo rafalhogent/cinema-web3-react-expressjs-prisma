@@ -1,0 +1,6 @@
+
+### Get hall by id
+GET {{BASE_URL}}:{{APP_PORT}}/halls/2 
+
+### Get all halls
+GET {{BASE_URL}}:{{APP_PORT}}/halls

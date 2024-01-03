@@ -1,0 +1,6 @@
+[
+  { "id": 1, "name": "Swiatowid", "capacity": 100 },
+  { "id": 2, "name": "Iluzjon", "capacity": 80 },
+  { "id": 3, "name": "Femina", "capacity": 45 },
+  { "id": 4, "name": "Luna", "capacity": 120 }
+]
