@@ -20,6 +20,9 @@ const movieController = {
         include: {
           genres: true,
           cast: true,
+          showtimes: {include:{
+            hall: true
+          }},
         },
       });
       res.send(m);

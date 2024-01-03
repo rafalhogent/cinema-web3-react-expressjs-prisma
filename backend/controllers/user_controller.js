@@ -32,7 +32,7 @@ const userController = {
       res.cookie("cookietoken", token, {
         httpOnly: true,
         secure: false,
-        maxAge: 1000 * 60 * 10,
+        maxAge: 3600 * 1000 * 24,
         sameSite: "strict",
       });
       res.status(200).json({ email: user.email });
@@ -77,7 +77,7 @@ const userController = {
       res.status(200).json({ email: user.email });
     } catch (error) {
       console.log(error.message);
-      if (error.code === 'P2002') res.status(409).send("Email already used")
+      if (error.code === "P2002") res.status(409).send("Email already used");
       else res.status(500).send("Error while registration.");
     }
   },
@@ -103,7 +103,7 @@ function generateAccessToken(user) {
     email: user.email,
   };
   const accessToken = jwt.sign(userCreds, process.env.SECRET_TOKEN, {
-    expiresIn: "25m",
+    expiresIn: "24h",
   });
   return accessToken;
 }

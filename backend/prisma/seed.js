@@ -6,11 +6,12 @@ const halls = require("../data/hall-seed.json");
 const { DateTime } = require("luxon");
 
 async function main() {
+  await prisma.showtime.deleteMany();
+  await prisma.$queryRaw`ALTER TABLE Showtime AUTO_INCREMENT = 1;`;
   await prisma.genre.deleteMany();
   await prisma.film.deleteMany();
   await prisma.actor.deleteMany();
   await prisma.hall.deleteMany();
-  await prisma.showtime.deleteMany();
   for (const actor of cast) {
     await prisma.actor.create({
       data: actor,
@@ -70,7 +71,7 @@ const generateShowtimes = () => {
 
   for (let dayIx = 1; dayIx < total * 3; dayIx++) {
     for (let hallIx = 0; hallIx < halls.length; hallIx++) {
-      const day = today.plus(dayIx);
+      const day = today.plus({days:dayIx});
       for (let hourIx = 0; hourIx < hours.length; hourIx++) {
         const time = DateTime.local(
           day.year,
@@ -91,15 +92,15 @@ const generateShowtimes = () => {
   for (const film of films) {
     const price = Math.floor(Math.random() * 10) + 10;
     for (let ix = 0; ix < totalShows; ix++) {
-      const nr = Math.floor(Math.random() * 10);
+      const nr = Math.floor(Math.random() * 20);
       const slot = slots[nr];
-      slots.slice(nr, 1);
       shows.push({
-        start: slot.start.toJSDate(),
+        startTime: slot.start,
         price: price,
         hall: { id: slot.hall.id },
         film: { id: film.id },
       });
+      slots.splice(nr, 1);
     }
   }
   return shows;

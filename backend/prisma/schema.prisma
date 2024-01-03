@@ -50,11 +50,11 @@ model Hall {
 }
 
 model Showtime {
-  id     Int      @id @default(autoincrement())
-  start  DateTime
-  price  Float
-  hallId Int
-  hall   Hall     @relation(fields: [hallId], references: [id])
-  filmId Int
-  film   Film     @relation(fields: [filmId], references: [id])
+  id        Int      @id @default(autoincrement())
+  startTime DateTime
+  price     Float
+  hallId    Int
+  hall      Hall     @relation(fields: [hallId], references: [id])
+  filmId    Int
+  film      Film     @relation(fields: [filmId], references: [id])
 }
