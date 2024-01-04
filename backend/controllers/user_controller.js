@@ -101,6 +101,7 @@ function generateAccessToken(user) {
     firstname: user.firstname,
     lastname: user.lastname,
     email: user.email,
+    id: user.id,
   };
   const accessToken = jwt.sign(userCreds, process.env.SECRET_TOKEN, {
     expiresIn: "24h",
