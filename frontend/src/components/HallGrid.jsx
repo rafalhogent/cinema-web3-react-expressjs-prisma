@@ -5,7 +5,7 @@ const HallGrid = ({ hall = null, onSeatsChange, selectedSeats = [] }) => {
   
   useEffect(() => {
     onSeatsChange([]);
-  }, []);
+  }, [hall]);
 
   const toggleSeat = (nr) => {
     let arr = [...selectedSeats];
