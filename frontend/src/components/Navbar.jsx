@@ -23,9 +23,15 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
-        to="/logout"
-        className="no-underline"
+        to="/cart"
+        className={({ isActive }) =>
+          isActive ? "underline underline-offset-8" : "no-underline"
+        }
       >
+        My Cart
+      </NavLink>
+
+      <NavLink to="/logout" className="no-underline">
         Logout
       </NavLink>
     </div>

@@ -9,6 +9,9 @@ import { DateTime } from "luxon";
 import _ from "lodash";
 import TSelector from "../components/TSelector";
 import HallGrid from "../components/HallGrid";
+import TButton from "../components/TButton";
+import { useDispatch, useSelector } from "react-redux";
+import { addItems } from "../store/slices/cartSlice";
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -17,6 +20,9 @@ const MoviePage = () => {
   const [selectedTime, setTime] = useState(null);
   const [selectedHall, setHall] = useState(null);
   const [seats, setSeats] = useState([]);
+  const dispatch = useDispatch();
+
+  const { cartItems } = useSelector((state) => state.cart);
 
   //#region handlers
   const handleDateSelection = (value) => {
@@ -30,6 +36,17 @@ const MoviePage = () => {
   };
   const handleSeatsChange = (value) => {
     setSeats(value);
+  };
+  const handleAddToCart = () => {
+    const tickets = seats.map((nr) => {
+      return {
+        movieTitle: movie.title,
+        showTime: myShowtime,
+        seatNr: nr,
+      };
+    });
+    dispatch(addItems(tickets));
+    setSeats([]);
   };
   //#endregion
 
@@ -106,6 +123,12 @@ const MoviePage = () => {
       );
     });
   }, [selectedDate, selectedTime, selectedHall]);
+
+  const disabledSeats = useMemo(() => {
+    return cartItems
+      .filter((x) => x.showTime?.id === myShowtime?.id)
+      .map((x) => x.seatNr);
+  }, [cartItems, selectedHall, myShowtime, selectedTime, selectedDate]);
   //#endregion
 
   if (isLoading || isFetching) {
@@ -173,16 +196,23 @@ const MoviePage = () => {
         />
       </div>
 
-      <div className="my-4">
-        <h2>ticket</h2>
+      <div className="my-4 mx-3  ">
+        <h2 className="text-md font-semibold">Your showtime:</h2>
         <p>
           {myShowtime?.date} {myShowtime?.time} {myShowtime?.hall.name}
         </p>
       </div>
 
-      <h3 className="text-lg">selected seats: {seats?.join(", ")}</h3>
-      <HallGrid hall={selectedHall} onSeatsChange={(e) => handleSeatsChange(e)} selectedSeats={seats}/>
+      <h3 className="text-lg m-3">selected seats: {seats?.join(", ")}</h3>
 
+      <TButton label="Add to cart" clickAction={handleAddToCart} />
+
+      <HallGrid
+        hall={selectedHall}
+        onSeatsChange={(e) => handleSeatsChange(e)}
+        selectedSeats={seats}
+        disabledSeats={disabledSeats}
+      />
     </div>
   );
 };

@@ -1,8 +1,12 @@
 import React, { useEffect, useMemo } from "react";
 import Seat from "./Seat";
 
-const HallGrid = ({ hall = null, onSeatsChange, selectedSeats = [] }) => {
-  
+const HallGrid = ({
+  hall = null,
+  onSeatsChange,
+  selectedSeats = [],
+  disabledSeats = [],
+}) => {
   useEffect(() => {
     onSeatsChange([]);
   }, [hall]);
@@ -28,8 +32,12 @@ const HallGrid = ({ hall = null, onSeatsChange, selectedSeats = [] }) => {
     }
   }, [hall]);
 
-  const checkSeat = (nr) => {
+  const checkSeatSelected = (nr) => {
     return selectedSeats?.includes(nr);
+  };
+
+  const checkSeatDisabled = (nr) => {
+    return disabledSeats?.includes(nr);
   };
 
   return (
@@ -40,7 +48,8 @@ const HallGrid = ({ hall = null, onSeatsChange, selectedSeats = [] }) => {
             key={nr}
             nr={nr}
             clickAction={toggleSeat}
-            selected={checkSeat(nr)}
+            selected={checkSeatSelected(nr)}
+            disabled={checkSeatDisabled(nr)}
           />
         );
       })}
