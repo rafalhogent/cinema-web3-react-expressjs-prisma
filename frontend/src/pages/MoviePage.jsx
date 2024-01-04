@@ -8,6 +8,7 @@ import Spinner from "../components/Spinner";
 import { DateTime } from "luxon";
 import _ from "lodash";
 import TSelector from "../components/TSelector";
+import HallGrid from "../components/HallGrid";
 
 const MoviePage = () => {
   const { id } = useParams();
@@ -15,7 +16,9 @@ const MoviePage = () => {
   const [selectedDate, setDate] = useState(null);
   const [selectedTime, setTime] = useState(null);
   const [selectedHall, setHall] = useState(null);
+  const [seats, setSeats] = useState([]);
 
+  //#region handlers
   const handleDateSelection = (value) => {
     setDate(value);
   };
@@ -25,6 +28,10 @@ const MoviePage = () => {
   const handleHallSelection = (value) => {
     setHall(value);
   };
+  const handleSeatsChange = (value) => {
+    setSeats(value);
+  };
+  //#endregion
 
   const { data, isLoading, isFetching, error, isError } = useQuery({
     queryKey: ["fetchMovie"],
@@ -38,6 +45,7 @@ const MoviePage = () => {
     handleError(isError, error, navigate);
   }, [isError]);
 
+  //#region computed memo's
   const movie = useMemo(() => {
     return data;
   }, [data, error]);
@@ -98,6 +106,7 @@ const MoviePage = () => {
       );
     });
   }, [selectedDate, selectedTime, selectedHall]);
+  //#endregion
 
   if (isLoading || isFetching) {
     return <Spinner />;
@@ -167,9 +176,13 @@ const MoviePage = () => {
       <div className="my-4">
         <h2>ticket</h2>
         <p>
-          {myShowtime?.date}  {myShowtime?.time}  {myShowtime?.hall.name}
+          {myShowtime?.date} {myShowtime?.time} {myShowtime?.hall.name}
         </p>
       </div>
+
+      <h3 className="text-lg">selected seats: {seats?.join(", ")}</h3>
+      <HallGrid hall={selectedHall} onSeatsChange={(e) => handleSeatsChange(e)} selectedSeats={seats}/>
+
     </div>
   );
 };

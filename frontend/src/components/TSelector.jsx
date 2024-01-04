@@ -35,10 +35,7 @@ const TSelector = ({
               isSelected={e[keyField] === selectedElement}
               clickAction={() => {
                 setSelElement(e[keyField]);
-                const obj = {
-                  [keyField]: e[keyField],
-                  [valueField]: e[valueField],
-                };
+                const obj = collection.find((x) => x[keyField] === e[keyField]);
                 clickAction && clickAction(obj);
               }}
             />

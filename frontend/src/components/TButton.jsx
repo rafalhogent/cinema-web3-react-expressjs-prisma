@@ -10,7 +10,7 @@ const TButton = ({
   isSelected = false,
 }) => {
   const classString = useMemo(() => {
-    const base = `hover:text-white py-2 px-4 border hover:border-transparent rounded-md inline-block`;
+    const base = `m-1 hover:text-white py-2 px-4 border hover:border-transparent rounded-md inline-block`;
     const colors = {
       primary:
         "hover:bg-blue-600 border-blue-600 " +
