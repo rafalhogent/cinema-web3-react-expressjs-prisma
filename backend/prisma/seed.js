@@ -6,43 +6,40 @@ const halls = require("../data/hall-seed.json");
 const { DateTime } = require("luxon");
 
 async function main() {
+  await prisma.ticket.deleteMany();
+  await prisma.$queryRaw`ALTER TABLE Ticket AUTO_INCREMENT = 1;`;
   await prisma.showtime.deleteMany();
   await prisma.$queryRaw`ALTER TABLE Showtime AUTO_INCREMENT = 1;`;
   await prisma.genre.deleteMany();
   await prisma.film.deleteMany();
   await prisma.actor.deleteMany();
   await prisma.hall.deleteMany();
-  for (const actor of cast) {
-    await prisma.actor.create({
-      data: actor,
-    });
-  }
 
-  for (const genre of genres) {
-    await prisma.genre.create({
-      data: genre,
-    });
-  }
+  await prisma.actor.createMany({
+    data: cast,
+  });
+
+  await prisma.genre.createMany({
+    data: genres,
+  });
 
   for (const film of films) {
     await prisma.film.create({
       data: {
         ...film,
         genres: {
-          connect: film.genres
+          connect: film.genres,
         },
         cast: {
-          connect: film.cast
-        }
+          connect: film.cast,
+        },
       },
     });
   }
 
-  for (const hall of halls) {
-    await prisma.hall.create({
-      data: hall,
-    });
-  }
+  await prisma.hall.createMany({
+    data: halls,
+  });
 
   const showtimes = generateShowtimes();
   for (const show of showtimes) {
@@ -71,7 +68,7 @@ const generateShowtimes = () => {
 
   for (let dayIx = 1; dayIx < total * 3; dayIx++) {
     for (let hallIx = 0; hallIx < halls.length; hallIx++) {
-      const day = today.plus({days:dayIx});
+      const day = today.plus({ days: dayIx });
       for (let hourIx = 0; hourIx < hours.length; hourIx++) {
         const time = DateTime.local(
           day.year,

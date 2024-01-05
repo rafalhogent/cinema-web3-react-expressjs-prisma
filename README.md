@@ -20,3 +20,30 @@ Het onderwerp van dit project is om een webapplicatie te ontwikkelen voor een bi
 
 > [!IMPORTANT]
 > Test voor een belangrijke notitie
+
+
+## Instructie
+
+1. install dependencies
+```sh
+yarn
+```
+##
+2. migrate database:
+```sh
+npx prisma migrate dev
+```
+##
+3. seed database
+```sh
+npx prisma db seed
+```
+##
+4. start applications
+```sh
+cd backend
+yarn dev
+cd ../frontend
+yarn dev
+```
+
