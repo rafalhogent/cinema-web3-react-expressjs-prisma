@@ -124,10 +124,15 @@ const MoviePage = () => {
     });
   }, [selectedDate, selectedTime, selectedHall]);
 
+  const soldSeats = useMemo(() => {
+    return myShowtime?.tickets.map((t) => t.seatNr);
+  }, [myShowtime]);
+
   const disabledSeats = useMemo(() => {
-    return cartItems
+    const seatsInCart = cartItems
       .filter((x) => x.showTime?.id === myShowtime?.id)
       .map((x) => x.seatNr);
+    return [...(soldSeats ?? []), ...seatsInCart];
   }, [cartItems, selectedHall, myShowtime, selectedTime, selectedDate]);
   //#endregion
 

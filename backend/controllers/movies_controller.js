@@ -21,7 +21,8 @@ const movieController = {
           genres: true,
           cast: true,
           showtimes: {include:{
-            hall: true
+            hall: true,
+            tickets: true
           }},
         },
       });
