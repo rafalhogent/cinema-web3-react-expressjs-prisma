@@ -31,11 +31,18 @@ const cartSlice = createSlice({
           )
       );
     },
+
+    removeAll(state, action) {
+      const ticket = action.payload;
+      state.cartItems = []
+    },
+
   },
 });
 
 export const {
   addItems,
-  removeItem
+  removeItem,
+  removeAll
 } = cartSlice.actions;
 export default cartSlice.reducer;

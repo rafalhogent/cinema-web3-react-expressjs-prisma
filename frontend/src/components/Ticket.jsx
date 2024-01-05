@@ -10,16 +10,20 @@ const Ticket = ({ seatNr, showTime, movieTitle, onRemove }) => {
         <div>date: {showTime.date}</div>
         <div>time: {showTime.time}</div>
         <div>
-          Hall nr: {showTime.hall.id} - {showTime.hall.name}
+          Hall nr: {showTime.hall?.id} - {showTime.hall?.name}
         </div>
         <div>price: {showTime.price}</div>
         <div>seat nr: {seatNr}</div>
       </div>
-      <div className="grid grid-cols-3 place-items-end content-end">
-        <p></p>
-        <p></p>
-      <TButton label="remove" color="danger" clickAction={onRemove}/>
-      </div>
+      {onRemove ? (
+        <div className="grid grid-cols-3 place-items-end content-end">
+          <p></p>
+          <p></p>
+          <TButton label="remove" color="danger" clickAction={onRemove} />
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   ) : (
     <div> no data </div>

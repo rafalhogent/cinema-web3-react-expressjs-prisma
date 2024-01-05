@@ -15,6 +15,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import CartPage from "./pages/CartPage.jsx";
+import UserTicketsPage from "./pages/UserTicketsPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <CartPage />,
+      },
+      {
+        path: "/tickets",
+        element: <UserTicketsPage />,
       },
     ],
   },

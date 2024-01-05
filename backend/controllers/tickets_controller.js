@@ -7,6 +7,14 @@ const ticketsController = {
         where: {
           ownerId: req.user.id,
         },
+        include:{
+          showtime:{
+            include:{
+              film: true,
+              hall: true
+            }
+          }
+        }
       });
       res.send(tickets);
     } catch (error) {

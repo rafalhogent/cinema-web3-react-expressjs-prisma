@@ -23,6 +23,15 @@ const Navbar = () => {
       </NavLink>
 
       <NavLink
+        to="/tickets"
+        className={({ isActive }) =>
+          isActive ? "underline underline-offset-8" : "no-underline"
+        }
+      >
+        My Tickets
+      </NavLink>
+
+      <NavLink
         to="/cart"
         className={({ isActive }) =>
           isActive ? "underline underline-offset-8" : "no-underline"
